@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Skills -->
+    <bean id="skill1" class="java.lang.String">
+        <constructor-arg value="Java" />
+    </bean>
+    <bean id="skill2" class="java.lang.String">
+        <constructor-arg value="Python" />
+    </bean>
+    <bean id="skill3" class="java.lang.String">
+        <constructor-arg value="Angular" />
+    </bean>
+    <bean id="skill4" class="java.lang.String">
+        <constructor-arg value="Spring Boot" />
+    </bean>
+
+    <!-- Departments -->
+    <bean id="dept1" class="com.cognizant.springlearn.model.Department">
+        <property name="id" value="1" />
+        <property name="name" value="Engineering" />
+    </bean>
+    <bean id="dept2" class="com.cognizant.springlearn.model.Department">
+        <property name="id" value="2" />
+        <property name="name" value="Marketing" />
+    </bean>
+    <bean id="dept3" class="com.cognizant.springlearn.model.Department">
+        <property name="id" value="3" />
+        <property name="name" value="Human Resources" />
+    </bean>
+
+    <!-- Employees -->
+    <bean id="emp1" class="com.cognizant.springlearn.model.Employee">
+        <property name="id" value="1" />
+        <property name="name" value="Alice Johnson" />
+        <property name="gender" value="Female" />
+        <property name="department" value="Engineering" />
+        <property name="skill" ref="skill1" />
+    </bean>
+    <bean id="emp2" class="com.cognizant.springlearn.model.Employee">
+        <property name="id" value="2" />
+        <property name="name" value="Bob Smith" />
+        <property name="gender" value="Male" />
+        <property name="department" value="Marketing" />
+        <property name="skill" ref="skill3" />
+    </bean>
+    <bean id="emp3" class="com.cognizant.springlearn.model.Employee">
+        <property name="id" value="3" />
+        <property name="name" value="Charlie Brown" />
+        <property name="gender" value="Male" />
+        <property name="department" value="Engineering" />
+        <property name="skill" ref="skill4" />
+    </bean>
+    <bean id="emp4" class="com.cognizant.springlearn.model.Employee">
+        <property name="id" value="4" />
+        <property name="name" value="Diana Prince" />
+        <property name="gender" value="Female" />
+        <property name="department" value="Human Resources" />
+        <property name="skill" ref="skill2" />
+    </bean>
+    <bean id="emp5" class="com.cognizant.springlearn.model.Employee">
+        <property name="id" value="5" />
+        <property name="name" value="Ethan Hunt" />
+        <property name="gender" value="Male" />
+        <property name="department" value="Engineering" />
+        <property name="skill" ref="skill1" />
+    </bean>
+
+    <!-- Employee List -->
+    <bean id="employeeList" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="emp1" />
+                <ref bean="emp2" />
+                <ref bean="emp3" />
+                <ref bean="emp4" />
+                <ref bean="emp5" />
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <!-- Department List -->
+    <bean id="departmentList" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="dept1" />
+                <ref bean="dept2" />
+                <ref bean="dept3" />
+            </list>
+        </constructor-arg>
+    </bean>
+
+</beans>
