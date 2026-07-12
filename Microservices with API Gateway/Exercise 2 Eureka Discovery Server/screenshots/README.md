@@ -15,8 +15,7 @@
 ## Screenshot 4: Greet Service via API Gateway
 - URL: http://localhost:9090/greet-service/greet
 - Shows: "Hello World from Greet Service!"
-
-## Screenshot 5: Terminal - All Services Running
+: Terminal - All Services Running
 - Shows: 3 terminals running Eureka, Greet Service, API Gateway
 
-> Note: Screenshots to be added manually via GitHub
+>
